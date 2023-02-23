@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Working Team</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100%;
+            margin: 0;
+            background-color: #fffef5;
+        }
+        
+        .wrapper {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .card {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: white;
+            padding: 50px 35px;
+            border-radius: 8px;
+            box-shadow: 0px 5px 16px 1px rgb(212, 210, 210);
+        }
+        
+        .about-wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 350px;
+            height: 350px;
+            z-index: 10;
+        }
+        
+        .image-wrapper {
+            flex-grow: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 250px;
+            /* animation: funtoos 1s;
+            transition: 1s; */
+            overflow: hidden;
+            /* position: relative; */
+        }
+        
+        .about {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 70px 0;
+            padding-right: 2px;
+        }
+        
+        p {
+            font-size: 24px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            color: hsl(240, 38%, 20%);
+            /* animation: funtoos 1s; */
+            overflow: hidden;
+            transition: 450ms;
+        }
+        
+        @keyframes funtoos {
+            from {
+                height: 0px;
+                opacity: 0;
+            }
+            to {
+                height: 100%;
+                opacity: 1;
+            }
+        }
+        
+        .name {
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+        }
+        
+        .profession {
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            color: hsl(240, 18%, 77%);
+        }
+        .quote {
+            font-size: 12px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            color: hsl(240, 18%, 77%);
+        }
+        
+        .image {
+            /* width: 80%; */
+            height: 250px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            transition: 1s;
+        }
+        
+        .slider-button {
+            align-self: flex-start;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 35px;
+            width: 70px;
+            border-radius: 40px;
+            background-color: white;
+            box-shadow: 0px 5px 16px 1px rgb(179, 179, 179);
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        @media (max-width:768px) {
+            body {
+                background-color: white;
+            }
+            .card {
+                justify-content: center;
+                box-shadow: none;
+            }
+            .about-wrapper {
+                order: 2;
+                width: 100%;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .about {
+                align-items: center;
+                text-align: center;
+                padding: 25px 25px;
+            }
+            .image-wrapper {
+                order: 1;
+            }
+            .p {
+                padding-top: 25px;
+            }
+            /* .image {
+                height: 300px;
+            }
+            img {
+                max-width: 300px;
+            }
+            .image-wrapper {
+                width: 300px;
+            } */
+        }
+        
+        @media (max-width: 450px) {
+            p {
+                font-size: 22px;
+                margin: 5px 0px;
+                padding-top: 50px;
+            }
+            body {
+                background-color: white;
+            }
+            .card {
+                justify-content: center;
+                box-shadow: none;
+                padding-right: 5px;
+                padding-left: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div style="position: relative;" class="card">
+            <div class="about-wrapper">
+                <div class="about">
+                    <p id="para">“The skilss that i've developed through Programming enabled me to start my carrer at a whole new”</p>
+                    <span id="name" class="name">Gariox 3D</span>
+                    <span id="profession" class="profession">Graphic Designer</span>
+
+                </div>
+            </div>
+
+            <div style="position: relative;" class="right-content">
+
+                <div style="height:340px;width:250px ;position: absolute;top: 50%;transform: translate(-40%,-50%);" class="svg">
+                    <img style="height: 100%;position: absolute;" src="https://raw.githubusercontent.com/rutvik110/Testimonials-Slider-/master/images/pattern-bg.svg">
+                </div>
+
+
+
+                <div class="image-wrapper">
+
+
+                    <div id="image" style="position: relative;" class="image">
+ <img style="border-radius: 8px;object-fit: cover;max-width: 250px;" src="https://raw.githubusercontent.com/shizothetechie/database/main/image/images (1).jpeg">
+                        <img style="border-radius: 8px;object-fit: cover;max-width:250px;" src="https://raw.githubusercontent.com/shizothetechie/database/main/image/1677063262412.jpg">
+                        <img style="border-radius: 8px;object-fit: cover;max-width: 250px;" src="https://raw.githubusercontent.com/shizothetechie/database/main/image/1677081734675.jpg">
+                        <img style="border-radius: 8px;object-fit: cover;max-width: 250px;" src="https://raw.githubusercontent.com/shizothetechie/database/main/image/1677082297458.jpg">
+                        <img style="border-radius: 8px;object-fit: cover;max-width: 250px;" src="https://raw.githubusercontent.com/shizothetechie/database/main/image/IMG-20230222-WA0049.jpg">
+                    <img style="border-radius: 8px;object-fit: cover;max-width: 250px;" src="https://raw.githubusercontent.com/shizothetechie/database/main/image/1677136216046.jpg">
+                    </div>
+                    <div id="slider-button" class="slider-button">
+                        <div style="cursor: pointer;" id="leftbutton" class="left">
+                            <span style="height: 25px;width: 25px;" class="iconify" data-icon="dashicons:arrow-left-alt2" data-inline="false"></span>
+
+                        </div>
+                        <div style="cursor:pointer;" id="rightbutton" class="right">
+
+                            <span style="height: 25px;width: 25px;" class="iconify" data-icon="dashicons:arrow-right-alt2" data-inline="false"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div style="position: absolute;bottom: 0px;height: 100px;width: 90%;left: 0;" class="bottomsvg">
+                <img style="width: 100%;height: 100%;" src="https://raw.githubusercontent.com/rutvik110/Testimonials-Slider-/master/images/pattern-curve.svg">
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+<script>
+    var sliderbutton = document.getElementById('slider-button'),
+        leftbutton = document.getElementById('leftbutton'),
+        rightbutton = document.getElementById('rightbutton'),
+        imagelist = document.getElementById('image'),
+        para = document.getElementById('para');
+    var nameof = document.getElementById('name'),
+        profession = document.getElementById('profession'),
+        quote = document.getElementById('quote'),
+        x = 1,
+        contentlist = [
+        
+            [
+                `
+  “The skilss that i've developed through Programming enabled me to start my carrer at a whole new” 
+`,
+                'Gariox 3D',
+                'Graphics Designer'
+            ],
+                [
+                `“ I’ve been interested in coding for a while but never taken the jump, until now. I’m now in the Study of my dreams and so excited about the future. ”`,
+                'Shizo The Techie',
+                'Software Developer'
+
+            ],
+            [
+                `I really love to Code & write program
+“Code. Eat. Sleep. & Repeat.”`,
+                'Nobita Nobi',
+                'Junior Front-end Developer'
+
+            ],
+
+            [
+                `“ </> Am so obsessed with Coding. I enjoy it. My Expertise in Programming & FrontEnd allows me to create complex Programs & attractive Web Applications..!”
+`,
+                'Rohh :/',
+                'Programer & Developer </>'
+
+            ],
+                        [
+                `“  I'm Able to Develop a web. I Enjoy Coding as well as i wana create my future in it. Web development is a Best way to express Feelings. ”
+`,
+                'Maddox-69',
+                'Web Developer'
+
+            ],
+             [
+                `“  I'm Able to act. I am Working on YouTube as an actor in creating Comedy Video.”
+`,
+                'Rishu',
+                'Acting & Comedy'
+
+            ],
+
+        ];
+
+
+    leftbutton.addEventListener('mouseup', async function(event) {
+
+
+        if (x > 1) {
+            x -= 1;
+
+            const lastnum = imagelist.style.getPropertyValue('transform').length - 3;
+            var xoffsetvalue = +imagelist.style.getPropertyValue('transform').substring(11, lastnum) + 250;
+
+            imagelist.style.transform = `translateX(${xoffsetvalue}px)`;
+            para.innerText = '';
+            para.innerText = contentlist[x - 1][0];
+            nameof.innerText = '';
+            nameof.innerText = contentlist[x - 1][1];
+            profession.innerText = '';
+            profession.innerText = contentlist[x - 1][2];
+            quote.innerText = '';
+            quote.innerText = contentlist[x - 1][3];
+
+            para.style.animation = 'funtoos';
+            para.style.animationDuration = '1s';
+
+            await setTimeout(function(event) {
+
+                para.style.animation = 'none';
+                console.log('reset done');
+
+            }, 1000);
+
+
+        }
+
+
+
+
+
+    });
+
+
+
+    rightbutton.addEventListener('mouseup', async function(event) {
+        if (x != imagelist.children.length && x < imagelist.children.length) {
+
+            x += 1;
+            // para.style.animation = 'none';
+            console.log(imagelist.children.length, x);
+            if (x <= imagelist.children.length) {
+
+
+
+                const lastnum = imagelist.style.getPropertyValue('transform').length - 3;
+                var xoffsetvalue = +imagelist.style.getPropertyValue('transform').substring(11, lastnum) - 250;
+
+                imagelist.style.transform = `translateX(${xoffsetvalue}px)`;
+
+                para.innerText = '';
+                para.innerText = contentlist[x - 1][0];
+                nameof.innerText = '';
+                nameof.innerText = contentlist[x - 1][1];
+                profession.innerText = '';
+                profession.innerText = contentlist[x - 1][2];
+   quote.innerText = '';
+                quote.innerText = contentlist[x - 1][3];
+
+                para.style.animation = 'funtoos';
+                para.style.animationDuration = '1s';
+
+                await setTimeout(function(event) {
+
+                    para.style.animation = 'none';
+                    console.log('reset done');
+
+                }, 1000);
+
+
+
+
+
+
+                // x += 1;
+
+            }
+
+
+
+
+        }
+
+
+
+    });
+</script>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+</html>
+
